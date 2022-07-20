@@ -1,0 +1,58 @@
+<h2>Home Page</h2>
+
+Add new employee
+
+<hr>
+
+<form method="post" action="/add/employee">
+
+<table>
+    <tr>
+        <td>
+        <label>Employee Name</label>
+        </td>
+        <td>
+        <input type="text" name="name" id="employee_name" placeholder="Employee Name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label>Employee Age</label>
+        </td>
+        <td>
+        <input type="number" name="age" id="employee_name" placeholder="Employee age">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label>Employee salary</label>
+        </td>
+        <td>
+        <input type="number" name="salary" id="salary" placeholder="Employee salary">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+        <select name="branch">Employee Branch
+        <option value="RnD">Rnd</option>
+            <option value="Human Resource">Human Resources</option>
+        <option value="Marketing">Marketing</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+        </td>
+        <td><button type="submit">Add New Employee</button></td>
+    </tr>
+</table>
+
+
+</form>
+
+<a href="/employee/list">List Employee</a>
+</br>
+

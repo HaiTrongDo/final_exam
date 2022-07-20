@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Products</title>
+</head>
+
+<body>
+<h2>List Employee</h2>
+<a href="/">Back to add employee</a>
+
+    <table class="table-success">
+        <tr class="table-secondary">
+        <th scope="col">
+            employee Code
+        </th>
+        <th scope="col">
+            Name
+        </th>
+        <th scope="col">
+            Salary
+        </th>
+        <th scope="col">
+            Age
+        </th>
+        <th scope="col">
+            branch
+        </th>
+        <th scope="col">
+            Edit
+        </th>
+        <th scope="col">
+            Delete
+        </th>
+        </tr>
+
+      <% for(const employee of employeeArray) { %>
+      <tr class="table-secondary">
+        <td class="table-primary">
+        <%= employee._id %>
+        </td>
+        <td class="table-primary">
+          <%= employee.name %>
+        </td>
+        <td class="table-primary">
+          <%= employee.salary %>
+        </td>
+        <td class="table-primary">
+          <%= employee.age %>
+        </td>
+        <td class="table-primary">
+          <%= employee.branch %>
+        </td>
+        <td class="table-primary">
+          <a href="/employee/edit/?_id=<%=employee._id %>">Edit</a>
+        </td>
+        <td class="table-primary">
+          <a href="/employee/delete/?_id=<%=employee._id %>" onclick="return confirm('Are you sure you want to delete this employee?')">Delete</a>
+        </td>
+    </tr>
+<% } %>
+    </table>
+</body>
+
+</html>
